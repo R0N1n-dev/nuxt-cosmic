@@ -11,7 +11,7 @@ async function uploadtoCosmic(filename, bufferData) {
       },
       //folder: "nuxt-test",
     });
-    console.log({ Success: true, data });
+    console.log({ Success: true, data: data?.media?.original_name });
   } catch (error) {
     console.log(error.message);
   }
@@ -58,8 +58,8 @@ export default defineEventHandler(async (event) => {
     } catch (error) {
       console.log(error.message);
     }*/
-    return {
+    /*return {
       Success: true,
-    };
+    };*/
   }
 });
