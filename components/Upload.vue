@@ -26,11 +26,12 @@ async function tryUpload() {
     body.append("file", image.value);
     body.append("guy-name", guysName.value);
     try {
-      await $fetch("/api/files", {
+      const res = await $fetch("/api/files", {
         method: "POST",
         body,
       });
       //alert("File uploaded");
+alert(res) 
     } catch (error) {
       console.log(error.message);
     }
